@@ -1,0 +1,27 @@
+{
+  "name": "festival-de-musica",
+  "version": "1.0.0",
+  "description": "Implementacion de Novedades de SASS y NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johanLozanofreelancer/Festival-de-Musica.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Johan Lozano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johanLozanofreelancer/Festival-de-Musica/issues"
+  },
+  "homepage": "https://github.com/johanLozanofreelancer/Festival-de-Musica#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
