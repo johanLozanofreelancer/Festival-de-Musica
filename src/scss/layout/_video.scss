@@ -29,6 +29,7 @@
     }
 }
 .contenido-video {
+    @include m.contenedor;
     z-index: 10;
     h2{
         margin: 0;

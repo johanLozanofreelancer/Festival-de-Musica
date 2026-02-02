@@ -2,6 +2,7 @@
 @use 'base/mixins' as m;
 
 .galeria {
+    @include m.contenedor;
     padding: 3rem 0;
     h3{
         text-align: center;

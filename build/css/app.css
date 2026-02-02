@@ -339,12 +339,6 @@ p {
   line-height: 1.5;
 }
 
-.contenedor {
-  width: 95%;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
 }
@@ -390,6 +384,11 @@ body > section {
     width: 100%;
     box-shadow: 2rem 2rem 3rem #333;
   }
+}
+.header .contenido-header {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .header .contenido-header {
@@ -454,6 +453,9 @@ body > section {
 }
 
 .contenido-video {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
   z-index: 10;
 }
 .contenido-video h2 {
@@ -471,6 +473,9 @@ body > section {
 }
 
 .sobre-festival {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
   padding: 5rem 0;
 }
 @media (min-width: 768px) {
@@ -507,6 +512,11 @@ body > section {
   margin: 5rem 0;
 }
 
+.escenarios-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
 @media (min-width: 768px) {
   .escenarios-contenedor {
     display: grid;
@@ -569,6 +579,9 @@ li span {
 }
 
 .galeria {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
   padding: 3rem 0;
 }
 .galeria h3 {
@@ -650,6 +663,11 @@ li span {
   text-align: center;
   color: #ffffff;
   margin: 1.5rem;
+}
+.boletos .contenedor-boletos {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .boletos .contenedor-boletos {

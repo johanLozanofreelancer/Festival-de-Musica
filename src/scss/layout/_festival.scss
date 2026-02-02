@@ -2,6 +2,7 @@
 @use 'base/mixins' as m;
 
 .sobre-festival {
+    @include m.contenedor;
     padding: 5rem 0;
     @include m.tablet {
         @include m.grid (2, 5rem)

@@ -10,6 +10,7 @@
         margin: 1.5rem;
     }
     .contenedor-boletos {
+        @include m.contenedor;
         @include m.tablet {
         @include m.grid (2, 3rem);    
         }

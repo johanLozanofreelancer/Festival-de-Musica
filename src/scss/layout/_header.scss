@@ -16,6 +16,7 @@
     }
 
     .contenido-header {
+        @include m.contenedor;
         @include m.tablet {
             display: flex;
             justify-content: space-between;
