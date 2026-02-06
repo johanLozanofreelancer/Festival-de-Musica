@@ -29,7 +29,7 @@
     max-width: 120rem;
     margin: 0 auto;
 }
-@mixin grid ($columnas, $espaciado){
+@mixin grid ($columnas: 2, $espaciado: 9rem){
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
     gap: $espaciado;
