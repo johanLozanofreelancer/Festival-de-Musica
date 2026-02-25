@@ -12,6 +12,7 @@
     .dia {
         text-transform: uppercase;
         margin: 5rem 0; 
+        font-size: 3rem;
     }
 }
 
@@ -22,30 +23,18 @@
     }
     p {
         color: v.$negro;
+        font-weight: bold;
+        font-size: 2.5rem;
     }
 }
 .escenario {
     padding-top: 2rem;
-
-    p {
-        &:after {
-            content: '';
-            display: block;    
-            margin: 2rem auto 0 auto;
-            width: 20rem;
-            height: 10rem;
-            background-size: 15rem;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
+    .nombre-escenario{
+        text-transform: uppercase;
+        font-weight: 900;
     }
 }
-.edm .nombre-escenario:after {
-    background-image: url(../img/icono_edm.png);
-}
-.rock .nombre-escenario:after {
-    background-image: url(../img/icono_rock.png);
-}
+
 .bg-amarillo {
     background-color: v.$amarillo;
 

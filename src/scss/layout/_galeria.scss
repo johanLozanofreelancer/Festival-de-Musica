@@ -22,6 +22,7 @@
         @include m.desktopXL {
             @include m.grid (6, 2rem)
         }
+        cursor:pointer;
     }
     img {
         height: 20rem;
@@ -41,11 +42,14 @@
     display: grid;
     place-items: center;
     background-color: rgb(0 0 0 / .5);
+    animation: fadeIn ease-in 0.5s;
 
-    animation: fadeIn ease-in .5s;
+    &.fade-out {
+        animation: fadeOut ease-out 0.5s;
+    }
     picture {       
         display: block;
-        max-width: 80rem;
+        max-width: 100rem;
     }
 }
 
