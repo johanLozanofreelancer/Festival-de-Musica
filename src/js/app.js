@@ -65,15 +65,16 @@ function crearGaleria() {
 
 function mostrarImagen(i) {
     // Creamos un picture para soportar formatos modernos
-    console.log('desde mostrarimagen')
+    
     const picture = document.createElement('PICTURE');
-        picture.src = `src/img/gallery/full/${i}.jpg`
-        picture.alt = 'Imagen Galeria'
-//    picture.innerHTML = `
-//         <source srcset="src/img/gallery/full/${i}.avif" type="image/avif">
-//         <source srcset="src/img/gallery/full/${i}.webp" type="image/webp">
-//         <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
-//     `;
+    picture.src = `src/img/gallery/full/${i}.jpg`
+    picture.alt = 'Imagen Galeria'
+
+   picture.innerHTML = `
+        <source srcset="src/img/gallery/full/${i}.avif" type="image/avif">
+        <source srcset="src/img/gallery/full/${i}.webp" type="image/webp">
+        <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
+    `;
 
     const overlay = document.createElement('DIV');
     overlay.appendChild(picture); 
