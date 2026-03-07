@@ -3,7 +3,10 @@
 @use 'base/mixins' as m;
 
 .lineup {
-    background-color: v.$rosa;
+    background-image: url(/src/img/lineUp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 5rem 0;
     h3, p {
         color: v.$blanco;
@@ -43,10 +46,10 @@
     }
 }
 .bg-verde {
-    background-color: v.$verde;
+    background-color: v.$plata;
 
     li:nth-child(odd) {
-        background-color: color.adjust(v.$verde, $lightness: -10%);
+        background-color: color.adjust(v.$plata, $lightness: -10%);
     }
 }
 .calendario {

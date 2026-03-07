@@ -32,12 +32,7 @@
 
 .overlay {
     position: fixed;
-    // right: 0;
-    // left: 0;
-    // top: 0;
-    // bottom: 0;
-    // width: 100%;
-    // height: 100%;       ** Todas los atributos comentados se pueden reemplazar facilmente con inset
+    padding-top: 10rem;
     inset: 0;
     display: grid;
     place-items: center;
@@ -45,15 +40,15 @@
     animation: fadeIn ease-in 0.5s;
 
     &.fade-out {
-        animation: fadeOut ease-out 0.5s;
+        animation: fadeOut ease-in 0.5s;
     }
-    picture {       
+    img {       
         display: block;
-        max-width: 100rem;
+        max-width: 70rem;
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn { 
     0%{
         opacity: 0;
     }

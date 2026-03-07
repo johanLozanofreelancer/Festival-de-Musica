@@ -5,17 +5,19 @@ document.addEventListener ( "DOMContentLoaded", function(){
 
 function iniciarApp() {
     barraFija();
-    crearGaleria();
+    enlaceResaltado();
     scrollNav();
+    crearGaleria();
 };
+
+// Funcion para mantener la barra de navegacion visible mientras hacemos scroll
 function barraFija() {
     const barra = document.querySelector('.header');
-    const inicio = document.querySelector('.header h1');
-    const sobreFestival = document.querySelector ('.sobre-festival');   
+    const contenidoHeader = document.querySelector ('.video');   
     const body = document.querySelector('body');
     
     window.addEventListener( 'scroll', function() {
-        if  (sobreFestival.getBoundingClientRect().bottom < 0 ){    
+        if  (contenidoHeader.getBoundingClientRect().bottom < 100 ){    
             barra.classList.add ('fijar-barra');  
             body.classList.add ('body-scroll',);
 
@@ -27,7 +29,11 @@ function barraFija() {
     })
 
 } 
-
+//Funcion para mantener el enlace resaltado mientras estamos en la seccion
+function enlaceResaltado() {
+    
+}
+// Funcion para que los enlaces de la barra de navegacion te dirijan a la seccion de la pagina seleccionada
 function scrollNav() {
     const enlaces = document.querySelectorAll ('.navegacion-principal a');
     
@@ -41,64 +47,64 @@ function scrollNav() {
        });
     }); 
 }
-
+// Funcion para crear la galeria, iterando las imagenes con JS
 function crearGaleria() {
     const galeria = document.querySelector (".galeria-imagenes");
     const CANTIDAD_IMAGENES = 16
     for ( let i = 1; i <= CANTIDAD_IMAGENES ; i++ ){
-        const imagen = document.createElement ("PICTURE");
+        const imagen = document.createElement ("IMG");
         imagen.src = `src/img/gallery/full/${i}.jpg`
         imagen.alt = 'Imagen Galeria'
 
         galeria.appendChild(imagen);
-        imagen.innerHTML = `
-            <source srcset="src/img/gallery/full/${i}.avif" type="imagen/avif">
-            <source srcset="src/img/gallery/full/${i}.webp" type="imagen/webp">
-            <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
-        `;   
+        // imagen.innerHTML = `
+        //     <source srcset="src/img/gallery/full/${i}.avif" type="imagen/avif">
+        //     <source srcset="src/img/gallery/full/${i}.webp" type="imagen/webp">
+        //     <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
+        // `;   
 
         imagen.onclick = function() {
             mostrarImagen(i)
         }
     }
 }
-
+//Funcion para visualizar la imagen ampliada en un modal 
 function mostrarImagen(i) {
     // Creamos un picture para soportar formatos modernos
     
-    const picture = document.createElement('PICTURE');
+    const picture = document.createElement('IMG');
     picture.src = `src/img/gallery/full/${i}.jpg`
     picture.alt = 'Imagen Galeria'
 
-   picture.innerHTML = `
-        <source srcset="src/img/gallery/full/${i}.avif" type="image/avif">
-        <source srcset="src/img/gallery/full/${i}.webp" type="image/webp">
-        <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
-    `;
+//    picture.innerHTML = `
+//         <source srcset="src/img/gallery/full/${i}.avif" type="image/avif">
+//         <source srcset="src/img/gallery/full/${i}.webp" type="image/webp">
+//         <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
+//     `;
 
     const overlay = document.createElement('DIV');
     overlay.appendChild(picture); 
     overlay.classList.add("overlay");
 
     // Función para cerrar con animación
-    const cerrarConAnimacion = () => {
+    const cerrarOverlay = () => {
         overlay.classList.add('fade-out'); // 1. Agregamos la clase de CSS
 
         setTimeout(() => {
             const body = document.querySelector("body");
             body.classList.remove('fijar-body');
-            overlay.remove(); // 2. Eliminamos después de que termine la animación (500ms)
-        }, 500); 
+            overlay?.remove(); // 2. Eliminamos un poco antes de que termine la animación (500ms)
+        }, 450); 
     };
 
     // Cerrar al hacer click en el overlay
-    overlay.onclick = cerrarConAnimacion;
+    overlay.onclick = cerrarOverlay;
 
     // Botón para cerrar el Modal 
     const cerrarModal = document.createElement('P');
     cerrarModal.textContent = 'X';
     cerrarModal.classList.add('btn-cerrar');
-    cerrarModal.onclick = cerrarConAnimacion; // Usamos la misma función
+    cerrarModal.onclick = cerrarOverlay; // Usamos la misma función
 
     overlay.appendChild(cerrarModal);
 

@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    background-color: v.$negro;
     font-family: v.$fuente_principal;
     font-optical-sizing: auto;
     font-style: normal;
@@ -29,7 +30,7 @@ body {
 
 p {
     font-size: 2rem;
-    color: v.$negro;
+    color: v.$blanco;
     line-height: 1.5;
 }
 
@@ -37,8 +38,9 @@ a {
     text-decoration: none;
 }
 h1,h2,h3 {
+    color: v.$blanco;
     margin: 0 0 5rem 0;
-    font-weight: 900;
+    font-weight: 200;
 }
 h1{
     font-size: 4rem;   

@@ -11,8 +11,8 @@
         position: absolute;
         background: linear-gradient(
             270deg,
-            color.change(v.$morado, $alpha: 0.6), // 60% es 0.6
-            color.change(color.adjust(v.$morado, $lightness: -20%), $alpha: 0.9)
+            color.change(color.adjust(v.$rojo, $lightness: -20%), $alpha: 0.6),        // 60% es 0.6
+            color.change(color.adjust(v.$negro, $lightness: -20%), $alpha: 0.9)
         );
         inset: 0;
         display: flex;
@@ -30,7 +30,7 @@
 }
 .contenido-video {
     @include m.contenedor;
-    z-index: 10;
+    z-index: 1;
     h2{
         margin: 0;
         font-size: 7rem;
@@ -39,7 +39,7 @@
     }
     p {
         display: inline-block;
-        background-color: v.$rosa;
+        background-color: v.$rojo;
         color: v.$blanco;
         padding: 1rem 2rem;
         font-weight: bold;
