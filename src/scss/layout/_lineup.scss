@@ -20,6 +20,7 @@
 }
 
 .escenarios-contenedor {
+
     @include m.contenedor;
     @include m.tablet {
         @include m.grid (2, 3rem)
@@ -31,6 +32,7 @@
     }
 }
 .escenario {
+        margin-bottom:2rem; 
     padding-top: 2rem;
     .nombre-escenario{
         text-transform: uppercase;
@@ -40,6 +42,7 @@
 
 .bg-amarillo {
     background-color: v.$amarillo;
+    border-radius: .5rem;
 
     li:nth-child(odd) {
         background-color: color.adjust(v.$amarillo, $lightness: -15%) ;
@@ -47,6 +50,7 @@
 }
 .bg-verde {
     background-color: v.$plata;
+    border-radius: .5rem;
 
     li:nth-child(odd) {
         background-color: color.adjust(v.$plata, $lightness: -10%);

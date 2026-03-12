@@ -31,7 +31,25 @@ function barraFija() {
 } 
 //Funcion para mantener el enlace resaltado mientras estamos en la seccion
 function enlaceResaltado() {
-    
+    document.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section')
+        const enlaces = document.querySelectorAll('.navegacion-principal a')
+        let actual = '';
+        sections.forEach ( section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if(window.scrollY >= sectionTop - (sectionHeight / 3 ) ){
+                actual = section.id;
+            } 
+        });
+        enlaces.forEach(enlace => {
+            enlace.classList.remove ('active')
+            if( enlace.getAttribute('href') === '#' + actual){
+                enlace.classList.add ('active')
+            }
+        })
+
+    });
 }
 // Funcion para que los enlaces de la barra de navegacion te dirijan a la seccion de la pagina seleccionada
 function scrollNav() {
@@ -41,7 +59,7 @@ function scrollNav() {
        enlace.addEventListener('click', function(e) {
         e.preventDefault();
 
-        const seccionScroll = e.target.attributes.href.value;
+        const seccionScroll = e.target.getAttribute('href');
         const seccion = document.querySelector (seccionScroll);
         seccion.scrollIntoView({ behavior:"smooth"}); 
        });
@@ -52,9 +70,12 @@ function crearGaleria() {
     const galeria = document.querySelector (".galeria-imagenes");
     const CANTIDAD_IMAGENES = 16
     for ( let i = 1; i <= CANTIDAD_IMAGENES ; i++ ){
-        const imagen = document.createElement ("IMG");
-        imagen.src = `src/img/gallery/full/${i}.jpg`
-        imagen.alt = 'Imagen Galeria'
+        const imagen = document.createElement ("PICTURE");
+        imagen.innerHTML = `
+            <source srcset="build/img/gallery/full/${i}.avif" type="image/avif">
+            <source srcset="build/img/gallery/full/${i}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="build/img/gallery/full/${i}.jpg" alt="imagen galeria">
+        `;
 
         galeria.appendChild(imagen);
         // imagen.innerHTML = `
@@ -72,15 +93,13 @@ function crearGaleria() {
 function mostrarImagen(i) {
     // Creamos un picture para soportar formatos modernos
     
-    const picture = document.createElement('IMG');
-    picture.src = `src/img/gallery/full/${i}.jpg`
-    picture.alt = 'Imagen Galeria'
+    const picture = document.createElement('PICTURE');
 
-//    picture.innerHTML = `
-//         <source srcset="src/img/gallery/full/${i}.avif" type="image/avif">
-//         <source srcset="src/img/gallery/full/${i}.webp" type="image/webp">
-//         <img loading="lazy" width="300" height="200" src="src/img/gallery/full/${i}.jpg" alt="imagen galeria">
-//     `;
+    picture.innerHTML = `
+        <source srcset="build/img/gallery/full/${i}.avif" type="image/avif">
+        <source srcset="build/img/gallery/full/${i}.webp" type="image/webp">
+        <img loading="lazy" width="200" height="300" src="build/img/gallery/full/${i}.jpg" alt="imagen galeria">
+    `;
 
     const overlay = document.createElement('DIV');
     overlay.appendChild(picture); 

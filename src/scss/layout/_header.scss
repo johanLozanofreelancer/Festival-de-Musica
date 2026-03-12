@@ -45,7 +45,8 @@
             padding: 0;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             color: v.$rojo;
         }
     }
