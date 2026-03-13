@@ -3,12 +3,13 @@
 
 .header {
     background-color: rgba(v.$negro, 0.9);
-    box-shadow: 2rem 2rem 3rem #312222;
+    box-shadow: 2rem 2rem 3rem #251818;
     text-align: center;
     padding: 2rem 0;
     z-index: 1;
     @include m.tablet {
         &.fijar-barra {
+            z-index: 2;
             position: fixed;
             top: 0;
             left: 0;

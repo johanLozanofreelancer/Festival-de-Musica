@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rock & Metal Festival: Experience the ultimate live music event with the best bands, multiple stages, and a full lineup schedule.">
     <title>Rock & Metal Fest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,197 +21,205 @@
             </nav>
         </div>
     </header>
-
-    <div class="video">
-        <div class="overlay">
-            <div class="contenido-video">
-                <h2>Rock & Metal Fest </h2>
-                <p>Julio 5 y 6 Barcelona, España</p>
+    <main>
+        <div class="video">
+            <div class="overlay">
+                <div class="contenido-video">
+                    <h2>Rock & Metal Fest </h2>
+                    <p>Julio 5 y 6 Barcelona, España</p>
+                </div>
             </div>
+            <video autoplay muted loop preload="none">
+                <source src="video/metal.mp4" type="video/mp4">
+                <source src="video/metal.ogv" type="video/ogg">
+                <source src="video/metal.webm" type="video/webm">
+            </video>
         </div>
-        <video autoplay muted loop>
-            <source src="video/metal.mp4" type="video/mp4">
-            <source src="video/metal.ogv" type="video/ogg">
-            <source src="video/metal.webm" type="video/webm">
-        </video>
-    </div>
 
-    <section class="sobre-festival">
-        <div class="imagen">
-            <picture>
-                <source srcset="build/img/imagen_rock.avif" type="imagen/avif">
-                <source srcset="build/img/imagen_rock.webp" type="imagen/webp">
-                <img loading="lazy" width="300" height="200" src="build/img/imagen_rock.jpg" alt="imagen Festival">
-            </picture>          
-        </div>
-        <div class="contenido-festival">
-            <h2>Rock & Metal Fest</h2>
-            <p class="fecha"> Julio 5 y 6 Barcelona, España</p>
-            <p>Este año Barcelona Tiembla con la Edicion 20ª del Rock & Metal Fest, evento sin precedentes que sorprende cada año a los fieles seguidores del genero, con una gran variedad de artistas quienes llegan desde los lugares mas recónditos del mundo para contagiar de poder y energia a su publico leal</p>
-        </div>
-    </section>
+        <section class="sobre-festival">
+            <div class="imagen">
+                <picture>
+                    <source srcset="build/img/imagen_rock.avif" type="image/avif">
+                    <source srcset="build/img/imagen_rock.webp" type="image/webp">
+                    <img loading="lazy" width="300" height="200" src="build/img/imagen_rock.jpg" alt="imagen de lo que se verá en el Festival">
+                </picture>          
+            </div>
+            <div class="contenido-festival">
+                <h2>Rock & Metal Fest</h2>
+                <p class="fecha"> Julio 5 y 6 Barcelona, España</p>
+                <p>Este año Barcelona Tiembla con la Edicion 20ª del Rock & Metal Fest, evento sin precedentes que sorprende cada año a los fieles seguidores del genero, con una gran variedad de artistas quienes llegan desde los lugares mas recónditos del mundo para contagiar de poder y energia a su publico leal</p>
+            </div>
+        </section>
 
-    <section id="lineup" class="lineup">
-        <h3> Line Up </h3>
-        <p class="dia"> Viernes 5 </p>
+        <section id="lineup" class="lineup">
+            <picture class="background-lineup">
+                <source srcset="build/img/lineUp.avif" type="image/avif">
+                <source srcset="build/img/lineUp.webp" type="image/webp">
+                <img loading="lazy" width="300" height="200" src="build/img/lineUp.jpg" alt="imagen representativa del genero del festival">
+            </picture>       
+            <div class="contenido-lineup">
+                <h3> Line Up </h3>
+                <p class="dia"> Viernes 5 </p>
+                <div class="escenarios-contenedor">
+                    <div class="escenario bg-amarillo">
+                        <p class="nombre-escenario">Escenario Rock</p>
+                        
+                        <ul class="calendario">
+                            <li>
+                                24:00 | <span>Metallica</span>
+                            </li>
+                            <li>
+                                22:00 | <span>Pearl Jam</span>
+                            </li>
+                            <li>
+                                20:00 | <span>Radiohead</span>
+                            </li>
+                            <li>
+                                19:00 | <span>Muse</span>
+                            </li>
+                            <li>
+                                18:00 | <span>Rage Against the Machine</span>
+                            </li>
+                            <li>
+                                17:00 | <span>30 Seconds to Mars</span>
+                            </li>
+                        </ul>
+                    </div> <!-- .escenario-->
 
-        <div class="escenarios-contenedor">
-            <div class="escenario bg-amarillo">
-                <p class="nombre-escenario">Escenario Rock</p>
-                
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Metallica</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Pearl Jam</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Radiohead</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Muse</span>
-                    </li>
-                    <li>
-                        18:00 | <span>Rage Against the Machine</span>
-                    </li>
-                    <li>
-                        17:00 | <span>30 Seconds to Mars</span>
-                    </li>
-                </ul>
-            </div> <!-- .escenario-->
+                    <div class="escenario bg-verde">    
+                        <p class="nombre-escenario">Escenario Metal</p>
+                                    
+                        <ul class="calendario">
+                            <li>
+                                24:00 | <span>Dream Theater</span>
+                            </li>
+                            <li>
+                                22:00 | <span>Slipknot</span>
+                            </li>
+                            <li>
+                                20:00 | <span>Sodom</span>
+                            </li>
+                            <li>
+                                19:00 | <span>Dark tranquillity</span>
+                            </li>
+                            <li>
+                                18:00 | <span>Morbid Angel</span>
+                            </li>
+                            <li>
+                                17:00 | <span>Avenged Sevenfold</span>
+                            </li>
+                            
+                        </ul> <!-- .escenario-->
 
-            <div class="escenario bg-verde">    
-                <p class="nombre-escenario">Escenario Metal</p>
-                              
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Dream Theater</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Slipknot</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Sodom</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Dark tranquillity</span>
-                    </li>
-                    <li>
-                        18:00 | <span>Morbid Angel</span>
-                    </li>
-                    <li>
-                        17:00 | <span>Avenged Sevenfold</span>
-                    </li>
+                    </div> <!-- .escenarios-contenedor -->
                     
-                </ul> <!-- .escenario-->
+                </div>
 
-            </div> <!-- .escenarios-contenedor -->
-            
-        </div>
+                <p class="dia"> sabado 6 </p>
+                <div class="escenarios-contenedor">
+                    <div class="escenario  bg-verde">
+                        <p class="nombre-escenario">Escenario Rock</p>
+                        
+                        <ul class="calendario">
+                            <li>
+                                24:00 | <span>Red Hot Chili Peppers</span>
+                            </li>
+                            <li>
+                                22:00 | <span>Guns N' Roses</span>
+                            </li>
+                            <li>
+                                20:00 | <span>Deftones</span>
+                            </li>
+                            <li>
+                                19:00 | <span>Limp Bizkit</span>
+                            </li>
+                            <li>
+                                18:00 | <span>Papa Roach</span>
+                            </li>
+                            <li>
+                                17:00 | <span>Lamb of God</span>
+                            </li>
+                        </ul>
+                    </div> <!-- .escenario-->
+                    
+                    <div class="escenario bg-amarillo">    
+                        <p class="nombre-escenario">Escenario Metal</p>
+                                    
+                        <ul class="calendario">
+                            <li>
+                                24:00 | <span>Pantera</span>
+                            </li>
+                            <li>
+                                22:00 | <span>Arch Enemy</span>
+                            </li>
+                            <li>
+                                20:00 | <span>Testament</span>
+                            </li>
+                            <li>
+                                19:00 | <span>Amon Amarth</span>
+                            </li>
+                            <li>
+                                18:00 | <span>Bullet For My Valentine</span>
+                            </li>
+                            <li>
+                                17:00 | <span>Parkway Drive</span>
+                            </li>
+                        </ul> <!-- .escenario-->
 
-        <p class="dia"> sabado 6 </p>
-        <div class="escenarios-contenedor">
-            <div class="escenario  bg-verde">
-                <p class="nombre-escenario">Escenario Rock</p>
+                    </div> <!-- .escenarios-contenedor -->
+                </div>
                 
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Red Hot Chili Peppers</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Guns N' Roses</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Deftones</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Limp Bizkit</span>
-                    </li>
-                    <li>
-                        18:00 | <span>Papa Roach</span>
-                    </li>
-                    <li>
-                        17:00 | <span>Lamb of God</span>
-                    </li>
-                </ul>
-            </div> <!-- .escenario-->
-            
-            <div class="escenario bg-amarillo">    
-                <p class="nombre-escenario">Escenario Metal</p>
-                              
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Pantera</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Arch Enemy</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Testament</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Amon Amarth</span>
-                    </li>
-                    <li>
-                        18:00 | <span>Bullet For My Valentine</span>
-                    </li>
-                    <li>
-                        17:00 | <span>Parkway Drive</span>
-                    </li>
-                </ul> <!-- .escenario-->
-
-            </div> <!-- .escenarios-contenedor -->
-        </div>
-    </section>
-
-    <section id="galeria" class="galeria">
-        <h3>Galería</h3>
-        <ul class="galeria-imagenes"></ul>
-    </section>
-
-    <section id="boletos" class="boletos ">
-        <h3>Boletos</h3>
-        <div class="contenedor-boletos">
-            <div class="basico pase">
-                <p class="pase-dia">pase 1 día</p>
-                <header class="pase-header">
-                    <p> incluye</p>
-                </header>
-                <div class="pase-body">
-                    <ul >
-                        <li>acceso a los dos escenarios</li>
-                        <li>comida y bebida</li>
-                    </ul> 
-                </div>
-                <footer class="pase-footer"> 
-                    <p> $100</p>
-                </footer>
             </div>
-            <div class="premium pase">
-                <p class="pase-dia">pase 2 días</p>
-                <header class="pase-header">
-                    <p> incluye</p>
-                </header>
-                <div  class="pase-body">
-                    <ul>
-                        <li>acceso a los dos escenarios</li>
-                        <li>comida y bebida</li>
-                        <li>camiseta del evento</li>
-                        <li>Acceso VIP</li>
-                    </ul>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <h3>Galería</h3>
+            <ul class="galeria-imagenes"></ul>
+        </section>
+
+        <section id="boletos" class="boletos ">
+            <h3>Boletos</h3>
+            <div class="contenedor-boletos">
+                <div class="basico pase">
+                    <p class="pase-dia">pase 1 día</p>
+                    <header class="pase-header">
+                        <p> incluye</p>
+                    </header>
+                    <div class="pase-body">
+                        <ul >
+                            <li>acceso a los dos escenarios</li>
+                            <li>comida y bebida</li>
+                        </ul> 
+                    </div>
+                    <footer class="pase-footer"> 
+                        <p> $100</p>
+                    </footer>
                 </div>
-                <footer class="pase-footer"> 
-                    <p> $180</p>
-                </footer>
+                <div class="premium pase">
+                    <p class="pase-dia">pase 2 días</p>
+                    <header class="pase-header">
+                        <p> incluye</p>
+                    </header>
+                    <div  class="pase-body">
+                        <ul>
+                            <li>acceso a los dos escenarios</li>
+                            <li>comida y bebida</li>
+                            <li>camiseta del evento</li>
+                            <li>Acceso VIP</li>
+                        </ul>
+                    </div>
+                    <footer class="pase-footer"> 
+                        <p> $180</p>
+                    </footer>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer class="footer">
         <p>Rock & Metal Fest. Todos Los Derechos Reservados.</p>
     </footer>
 
-    <script src="build/js/app.js"></script>
+    <script src="build/js/app.js" defer></script>
 
 </body>
 </html>
