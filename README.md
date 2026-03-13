@@ -1,4 +1,5 @@
 # Festival de Música Rock & EDM
+ [Aquí el link:](https://bcn-rockfest-2026.netlify.app/)
 
 Proyecto de práctica para el desarrollo de una landing page optimizada, enfocada en la automatización de tareas y maquetación avanzada.
 
