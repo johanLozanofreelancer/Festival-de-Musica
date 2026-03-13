@@ -91,5 +91,5 @@ export function dev() {
     watch('src/js/**/*.js', js)
     watch('src/img/**/*.{png,jpg}', imagenes)
 }
-
+export const build = series(js, css, imagenes);
 export default series( js, css, imagenes, dev )
